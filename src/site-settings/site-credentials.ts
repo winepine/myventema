@@ -1,0 +1,11 @@
+export const siteURL = process.env.NEXT_PUBLIC_DOMAIN_URL;
+export const consumerKey = process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY;
+export const consumerSecret = process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET;
+export const googleTagManagerKey = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER;
+export const googleMapKey = process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY;
+export const googleMapRegion = process.env.NEXT_PUBLIC_GOOGLE_MAP_REGION;
+export const stripePrimaryKey = process.env.NEXT_PUBLIC_STRIPE_PRIMARY_KEY
+export const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+export const sendGridApiKey=process.env.SEND_GRID_API_KEY
+export const sendGridEmailFrom=process.env.SEND_GRID_EMAIL_FROM
+export const frontEndDomain=process.env.NEXT_PUBLIC_FRONT_END_DOMAIN

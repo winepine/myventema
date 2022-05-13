@@ -1,0 +1,116 @@
+[
+  {
+    "id": 23,
+    "name": "Bottle",
+    "slug": "bottle",
+    "description": "",
+    "count": 1,
+    "_links": {
+      "self": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags/23"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags"
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "name": "Buy",
+    "slug": "buy",
+    "description": "",
+    "count": 1,
+    "_links": {
+      "self": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags/19"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags"
+        }
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "name": "Care",
+    "slug": "care",
+    "description": "",
+    "count": 1,
+    "_links": {
+      "self": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags/22"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags"
+        }
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "name": "Polish",
+    "slug": "polish",
+    "description": "",
+    "count": 1,
+    "_links": {
+      "self": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags/21"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags"
+        }
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "name": "Rent",
+    "slug": "rent",
+    "description": "",
+    "count": 2,
+    "_links": {
+      "self": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags/20"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags"
+        }
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "name": "Skin",
+    "slug": "skin",
+    "description": "",
+    "count": 1,
+    "_links": {
+      "self": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags/24"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://all4skin.gr/eshop/wp-json/wc/v3/products/tags"
+        }
+      ]
+    }
+  }
+]
