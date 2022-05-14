@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 export const GiftCardWrapper = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
   display: flex;
   flex-direction: column;
 `;
@@ -19,7 +19,7 @@ export const GiftCardImageWrapper = styled.div`
   text-align: center;
   border-radius: 6px;
   overflow: hidden;
-  background-color: ${themeGet('colors.gray.500', '#f1f1f1')};
+  background-color: ${themeGet("colors.gray.500", "#f1f1f1")};
 
   img {
     width: 100%;
@@ -42,12 +42,12 @@ export const CardInfo = styled.div`
 `;
 
 export const CardContent = styled.div`
-  background-color: ${themeGet('colors.white', '#ffffff')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
   overflow: hidden;
-  border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
   border-top: 0;
-  border-bottom-left-radius: ${themeGet('radii.base', '6px')};
-  border-bottom-right-radius: ${themeGet('radii.base', '6px')};
+  border-bottom-left-radius: ${themeGet("radii.base", "6px")};
+  border-bottom-right-radius: ${themeGet("radii.base", "6px")};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,10 +55,10 @@ export const CardContent = styled.div`
 `;
 
 export const GiftCode = styled.input`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   margin: 0;
   border: 0;
   outline: 0;
@@ -66,7 +66,7 @@ export const GiftCode = styled.input`
   width: 100%;
 
   @media (max-width: 767px) {
-    font-size: calc(${themeGet('fontSizes.base', '15')}px - 1px);
+    font-size: calc(${themeGet("fontSizes.base", "15")}px - 1px);
   }
 `;
 
@@ -80,10 +80,10 @@ export const CopyButton = styled.button`
   border: 0;
   outline: 0;
   box-shadow: none;
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
   padding: 0;
   cursor: pointer;
   flex-shrink: 0;
@@ -91,15 +91,15 @@ export const CopyButton = styled.button`
   white-space: nowrap;
 
   @media (max-width: 767px) {
-    font-size: ${themeGet('fontSizes.xm', '12')}px;
+    font-size: ${themeGet("fontSizes.xm", "12")}px;
   }
 `;
 
 export const CopySuccess = styled.span`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
   line-height: 18px;
   white-space: nowrap;
 `;

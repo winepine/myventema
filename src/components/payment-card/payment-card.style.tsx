@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 export const Wrapper = styled.label`
   cursor: pointer;
@@ -15,7 +15,7 @@ export const Wrapper = styled.label`
     opacity: 0;
     &:checked {
       & ~ .payment-card {
-        border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+        border-color: ${themeGet("colors.primary.regular", "#EA870E")};
       }
     }
   }
@@ -30,12 +30,12 @@ export const PaymentCardWrapper = styled.span`
   width: 100%;
   flex-direction: column;
   position: relative;
-  background-color: ${(props) => props.color || '#e4f4fc'};
+  background-color: ${props => props.color || "#e4f4fc"};
   padding: 15px 20px;
-  border-radius: ${themeGet('radii.base', '6px')};
+  border-radius: ${themeGet("radii.base", "6px")};
   border-width: 1px;
   border-style: solid;
-  border-color: ${(props) => props.color || '#e4f4fc'};
+  border-color: ${props => props.color || "#e4f4fc"};
 `;
 
 export const CardLogo = styled.span`
@@ -54,28 +54,28 @@ export const CardNumber = styled.span`
   justify-content: space-between;
   margin-bottom: 9px;
   span {
-    font-size: calc(${themeGet('fontSizes.base', '15')}px - 1px);
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.text.bold', '#0D1136')};
+    font-size: calc(${themeGet("fontSizes.base", "15")}px - 1px);
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.text.bold", "#0D1136")};
     line-height: 1.25;
     &.card-number {
-      font-size: ${themeGet('fontSizes.xs', '12')}px;
+      font-size: ${themeGet("fontSizes.xs", "12")}px;
     }
   }
 `;
 
 export const CardNumTitle = styled.span`
-  font-size: calc(${themeGet('fontSizes.base', '15')}px - 5px);
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.regular', '#77798C')};
+  font-size: calc(${themeGet("fontSizes.base", "15")}px - 5px);
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.regular", "#77798C")};
   display: block;
   margin-bottom: 11px;
 `;
 
 export const Name = styled.span`
-  font-size: ${themeGet('fontSizes.xs', '12')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-size: ${themeGet("fontSizes.xs", "12")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   display: block;
 `;
 export const DeleteButton = styled.span`
@@ -91,7 +91,7 @@ export const DeleteButton = styled.span`
   outline: 0;
   padding: 0;
   color: #fff;
-  background-color: ${themeGet('colors.secondary.regular', '#ff5b60')};
+  background-color: ${themeGet("colors.secondary.regular", "#ff5b60")};
   position: absolute;
   top: 10px;
   right: 20px;

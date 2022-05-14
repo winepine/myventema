@@ -1,17 +1,17 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 export const Text = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.label', '#909090')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.label", "#909090")};
   margin-top: 15px;
   text-align: center;
 `;
 
 export const TextHighlighted = styled.span`
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
 `;
 
 export const Container = styled.div`
@@ -20,9 +20,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 50px 30px;
-  border: 2px dashed ${themeGet('colors.gray.500', '#f1f1f1')};
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  color: ${themeGet('colors.gray.900', '#bdbdbd')};
+  border: 2px dashed ${themeGet("colors.gray.500", "#f1f1f1")};
+  background-color: ${themeGet("colors.white", "#ffffff")};
+  color: ${themeGet("colors.gray.900", "#bdbdbd")};
   outline: none;
   cursor: pointer;
 `;
@@ -35,7 +35,7 @@ export const ThumbsContainer = styled.aside`
 `;
 
 export const Thumb = styled.div`
-  border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
   display: inline-flex;
   border-radius: 2px;
   margin-bottom: 8px;

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 export const Header = styled.header`
   display: flex;
@@ -8,10 +8,10 @@ export const Header = styled.header`
   margin-top: -15px;
 
   .addCard {
-    font-family: ${themeGet('fonts.body', 'sans-serif')};
-    font-size: ${themeGet('fontSizes.sm', '13')}px;
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    font-family: ${themeGet("fonts.body", "sans-serif")};
+    font-size: ${themeGet("fontSizes.sm", "13")}px;
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.primary.regular", "#EA870E")};
   }
 `;
 export const PaymentCardList = styled.div`
@@ -47,10 +47,10 @@ export const IconWrapper = styled.span`
 `;
 
 export const SavedCard = styled.span`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
   display: block;
 `;
 
@@ -64,7 +64,7 @@ export const Arrow = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${themeGet('colors.white', '#ffffff')};
+  color: ${themeGet("colors.white", "#ffffff")};
   position: absolute;
   top: 50%;
   margin-top: -15px;
@@ -94,8 +94,8 @@ export const AddCard = styled.div`
   .reusecore__button {
     flex-grow: 1;
     height: auto;
-    border: 1px dashed ${themeGet('colors.gray.500', '#f1f1f1')};
-    border-radius: ${themeGet('radii.base', '6px')};
+    border: 1px dashed ${themeGet("colors.gray.500", "#f1f1f1")};
+    border-radius: ${themeGet("radii.base", "6px")};
     padding: 0 5px;
     flex-direction: column;
     svg {
@@ -106,14 +106,14 @@ export const AddCard = styled.div`
       margin-bottom: 5px;
     }
     &:hover {
-      border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+      border-color: ${themeGet("colors.primary.regular", "#EA870E")};
     }
   }
   .safe-label {
-    font-family: ${themeGet('fonts.body', 'sans-serif')};
-    font-size: ${themeGet('fontSizes.sm', '13')}px;
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.text.regular', '#77798C')};
+    font-family: ${themeGet("fonts.body", "sans-serif")};
+    font-size: ${themeGet("fontSizes.sm", "13")}px;
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.text.regular", "#77798C")};
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -137,16 +137,16 @@ export const OtherPayOption = styled.div`
 
     span {
       display: block;
-      border-radius: ${themeGet('radii.base', '6px')};
-      background-color: ${themeGet('colors.gray.200', '#F7F7F7')};
-      border: 1px solid ${themeGet('colors.gray.200', '#F7F7F7')};
+      border-radius: ${themeGet("radii.base", "6px")};
+      background-color: ${themeGet("colors.gray.200", "#F7F7F7")};
+      border: 1px solid ${themeGet("colors.gray.200", "#F7F7F7")};
       text-align: center;
       padding: 12px 20px;
       cursor: pointer;
-      color: ${themeGet('colors.text.bold', '#0D1136')};
-      font-size: calc(${themeGet('fontSizes.base', '15')}px - 1px);
+      color: ${themeGet("colors.text.bold", "#0D1136")};
+      font-size: calc(${themeGet("fontSizes.base", "15")}px - 1px);
       line-height: 24px;
-      font-weight: ${themeGet('fontWeights.bold', '700')};
+      font-weight: ${themeGet("fontWeights.bold", "700")};
       -webkit-transition: all 0.25s ease;
       transition: all 0.25s ease;
     }
@@ -157,8 +157,8 @@ export const OtherPayOption = styled.div`
       opacity: 0;
       &:checked {
         & ~ span {
-          border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
-          background-color: ${themeGet('colors.white', '#ffffff')};
+          border-color: ${themeGet("colors.primary.regular", "#EA870E")};
+          background-color: ${themeGet("colors.white", "#ffffff")};
         }
       }
     }
@@ -180,8 +180,8 @@ export const DeleteButton = styled.button`
   cursor: pointer;
   outline: 0;
   padding: 0;
-  color: ${themeGet('colors.white', '#ffffff')};
-  background-color: ${themeGet('colors.secondary.regular', '#ff5b60')};
+  color: ${themeGet("colors.white", "#ffffff")};
+  background-color: ${themeGet("colors.secondary.regular", "#ff5b60")};
   position: absolute;
   top: 10px;
   right: 10px;

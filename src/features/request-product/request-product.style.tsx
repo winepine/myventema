@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
-import { Row as Rows, Col as Cols } from 'react-styled-flexboxgrid';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { Row as Rows, Col as Cols } from "react-styled-flexboxgrid";
 
 const FormWrapper = styled.div`
-  background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
+  background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
   position: relative;
   padding: 130px 0 60px 0;
 
@@ -14,10 +14,10 @@ const FormWrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
+  border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
   padding: 60px;
-  border-radius: ${themeGet('radii.base', '6px')};
+  border-radius: ${themeGet("radii.base", "6px")};
   overflow: hidden;
   position: relative;
   @media (min-width: 990px) {
@@ -40,27 +40,27 @@ export const FormTitleWrapper = styled.div`
 `;
 
 export const FormTitle = styled.h3`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.lg', '21')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.lg", "21")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
   line-height: 1.2;
   margin: 0px;
 `;
 
 export const NoteText = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   line-height: 1.5;
 `;
 
 export const Heading = styled.h3`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   line-height: 1.2;
   margin-bottom: 20px;
 `;
@@ -164,12 +164,12 @@ export const ButtonGroup = styled.div`
     flex-shrink: 0;
     height: auto;
     min-height: 77px;
-    border: 1px dashed ${themeGet('colors.gray.500', '#f1f1f1')};
+    border: 1px dashed ${themeGet("colors.gray.500", "#f1f1f1")};
     margin-bottom: 15px;
     margin-left: 0;
     margin-right: auto;
     &:hover {
-      border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+      border-color: ${themeGet("colors.primary.regular", "#EA870E")};
     }
 
     @media (max-width: 700px) {
@@ -193,7 +193,7 @@ export const PaymentOption = styled.div`
   padding-top: 60px;
   position: relative;
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 150%;
     height: 1px;
@@ -201,7 +201,7 @@ export const PaymentOption = styled.div`
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    background: ${themeGet('colors.gray.500', '#f1f1f1')};
+    background: ${themeGet("colors.gray.500", "#f1f1f1")};
   }
 `;
 
@@ -222,7 +222,7 @@ export const PaymentCardList = styled.div`
       opacity: 0;
       &:checked {
         & ~ .payment-card {
-          border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+          border-color: ${themeGet("colors.primary.regular", "#EA870E")};
         }
       }
     }
@@ -237,10 +237,10 @@ export const SavedCard = styled.div`
   max-width: calc(100% - 120px);
 
   .saved-card-title {
-    font-family: ${themeGet('fonts.body', 'Lato')};
-    font-size: ${themeGet('fontSizes.sm', '13')}px;
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    font-family: ${themeGet("fonts.body", "Lato")};
+    font-size: ${themeGet("fontSizes.sm", "13")}px;
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.primary.regular", "#EA870E")};
     margin-bottom: 10px;
     display: block;
   }
@@ -255,8 +255,8 @@ export const AddCard = styled.div`
   .reusecore__button {
     flex-grow: 1;
     height: auto;
-    border: 1px dashed ${themeGet('colors.gray.500', '#f1f1f1')};
-    border-radius: ${themeGet('radii.base', '6px')};
+    border: 1px dashed ${themeGet("colors.gray.500", "#f1f1f1")};
+    border-radius: ${themeGet("radii.base", "6px")};
     padding: 0 5px;
     flex-direction: column;
     svg {
@@ -267,14 +267,14 @@ export const AddCard = styled.div`
       margin-bottom: 5px;
     }
     &:hover {
-      border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+      border-color: ${themeGet("colors.primary.regular", "#EA870E")};
     }
   }
   .safe-label {
-    font-family: ${themeGet('fonts.body', 'Lato')};
-    font-size: ${themeGet('fontSizes.sm', '13')}px;
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.text.regular', '#77798c')};
+    font-family: ${themeGet("fonts.body", "Lato")};
+    font-size: ${themeGet("fontSizes.sm", "13")}px;
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.text.regular", "#77798c")};
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -295,16 +295,16 @@ export const OtherPayOption = styled.div`
     flex-grow: 1;
     span {
       display: block;
-      border-radius: ${themeGet('radii.base', '6px')};
-      background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
-      border: 1px solid ${themeGet('colors.gray.200', '#f7f7f7')};
+      border-radius: ${themeGet("radii.base", "6px")};
+      background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
+      border: 1px solid ${themeGet("colors.gray.200", "#f7f7f7")};
       text-align: center;
       padding: 12px 20px;
       cursor: pointer;
-      color: ${themeGet('colors.text.bold', '#0D1136')};
-      font-family: ${themeGet('fonts.body', 'Lato')};
-      font-size: ${themeGet('fontSizes.sm', '13')}px;
-      font-weight: ${themeGet('fontWeights.regular', '400')};
+      color: ${themeGet("colors.text.bold", "#0D1136")};
+      font-family: ${themeGet("fonts.body", "Lato")};
+      font-size: ${themeGet("fontSizes.sm", "13")}px;
+      font-weight: ${themeGet("fontWeights.regular", "400")};
       line-height: 24px;
       -webkit-transition: all 0.25s ease;
       transition: all 0.25s ease;
@@ -316,8 +316,8 @@ export const OtherPayOption = styled.div`
       opacity: 0;
       &:checked {
         & ~ span {
-          border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
-          background-color: ${themeGet('colors.white', '#ffffff')};
+          border-color: ${themeGet("colors.primary.regular", "#EA870E")};
+          background-color: ${themeGet("colors.white", "#ffffff")};
         }
       }
     }
@@ -356,12 +356,12 @@ export const AddcontactWrapper = styled.div`
     margin-bottom: 30px;
   }
   .button_outline {
-    border: 1px dashed ${themeGet('colors.gray.500', '#f1f1f1')};
+    border: 1px dashed ${themeGet("colors.gray.500", "#f1f1f1")};
     .btn-icon {
       margin-right: 5px;
     }
     &:hover {
-      border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+      border-color: ${themeGet("colors.primary.regular", "#EA870E")};
     }
   }
 `;
@@ -388,10 +388,10 @@ export const AuthenticationOverlay = styled.div`
 `;
 
 export const InfoText = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   margin-bottom: 15px;
   margin-top: 15px;
 `;
@@ -401,8 +401,8 @@ export const OrderSummary = styled.div`
   display: flex;
   flex-direction: column;
   padding: 60px;
-  border-radius: ${themeGet('radii.base', '6px')};
-  background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
+  border-radius: ${themeGet("radii.base", "6px")};
+  background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
 
   @media (max-width: 767px) {
     padding: 30px;
@@ -410,19 +410,19 @@ export const OrderSummary = styled.div`
 `;
 
 export const OrderLabel = styled.span`
-  color: ${themeGet('colors.text.bold', '#0D1136')};
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
   line-height: 24px;
 `;
 
 export const OrderAmount = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   line-height: 24px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
+  font-weight: ${themeGet("fontWeights.bold", "700")};
 `;
 
 export const OrderSummaryItem = styled.div`
@@ -476,27 +476,27 @@ export const CouponBoxWrapper = styled.div`
 `;
 
 export const CouponCode = styled.p`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.regular', '#77798c')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.regular", "#77798c")};
 
   width: 100%;
   display: flex;
   justify-content: center;
 
   span {
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.primary.regular", "#EA870E")};
     margin-left: 5px;
   }
 `;
 
-export const ErrorMsg = styled('span')`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.secondary.hover', '#FF282F')};
+export const ErrorMsg = styled("span")`
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.secondary.hover", "#FF282F")};
   padding-top: 10px;
   display: flex;
   justify-content: center;

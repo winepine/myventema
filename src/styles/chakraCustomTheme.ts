@@ -2,7 +2,7 @@ import { theme, extendTheme } from "@chakra-ui/react";
 
 const customTheme = extendTheme({
   styles: {
-    global: (props) => ({
+    global: props => ({
       "html, body": {
         fontSize: "95%",
         // color: props.colorMode === "light" ? "gray.800" : "gray.200",
@@ -16,11 +16,11 @@ const customTheme = extendTheme({
       // },
 
       // Eric: only used in ListItem
-      ".boxText" : {
+      ".boxText": {
         textColor: props.colorMode === "light" ? "gray.800" : "gray.200",
         fontSize: "lg",
-      }
-    })
+      },
+    }),
   },
   fonts: {
     ...theme.fonts,
@@ -50,17 +50,17 @@ const customTheme = extendTheme({
       500: "#FD5A89",
       700: "#ca486e",
       800: "#ca486e",
-      900: "#ca486e"
-    }
+      900: "#ca486e",
+    },
   },
   components: {
     Text: {
       baseStyle: {
-        color: 'black',
-        fontSize: "17"
-      }
-    }
-  }
+        color: "black",
+        fontSize: "17",
+      },
+    },
+  },
 });
 
 export default customTheme;

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 type ButtonGroupProps = {
   flexStart?: any;
@@ -11,8 +11,8 @@ export const ButtonGroup = styled.div<ButtonGroupProps>`
 
   .radioGroup {
     flex-grow: 1;
-    justify-content: ${(props) =>
-      props.flexStart === true ? 'flex-start' : 'space-between'};
+    justify-content: ${props =>
+      props.flexStart === true ? "flex-start" : "space-between"};
 
     label {
       margin-top: 0;
@@ -59,12 +59,12 @@ export const ButtonGroup = styled.div<ButtonGroupProps>`
     flex-shrink: 0;
     height: auto;
     min-height: 77px;
-    border: 1px dashed ${themeGet('colors.gray.500', '#f1f1f1')};
+    border: 1px dashed ${themeGet("colors.gray.500", "#f1f1f1")};
     margin-bottom: 15px;
     margin-left: 0;
     margin-right: auto;
     &:hover {
-      border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+      border-color: ${themeGet("colors.primary.regular", "#EA870E")};
     }
 
     @media (max-width: 700px) {
@@ -87,10 +87,10 @@ export const ButtonGroup = styled.div<ButtonGroupProps>`
     outline: 0;
     border-radius: 0;
     padding: 0;
-    font-family: ${themeGet('fonts.body', 'Lato')};
-    font-size: ${themeGet('fontSizes.sm', '13')}px;
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    font-family: ${themeGet("fonts.body", "Lato")};
+    font-size: ${themeGet("fontSizes.sm", "13")}px;
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.primary.regular", "#EA870E")};
     position: absolute;
     top: 40px;
     right: 30px;

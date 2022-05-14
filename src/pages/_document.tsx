@@ -4,10 +4,11 @@ import Document, {
   Head,
   Main,
   NextScript,
-  DocumentContext
-} from 'next/document';
-import { frontEndDomain, siteURL } from 'site-settings/site-credentials';
-import { ServerStyleSheet } from 'styled-components';
+  DocumentContext,
+} from "next/document";
+import { frontEndDomain, siteURL } from "site-settings/site-credentials";
+import { ServerStyleSheet } from "styled-components";
+import LogoImage from "../../public/assets/myventemalogo.png";
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -17,7 +18,7 @@ export default class CustomDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props: any) =>
+          enhanceApp: App => (props: any) =>
             sheet.collectStyles(<App {...props} />),
         });
 
@@ -39,7 +40,7 @@ export default class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href={`https://all4skin.gr/wp-content/uploads/2019/05/favicon-skin4.png`} />
+          <link rel="shortcut icon" href={LogoImage} />
         </Head>
         <body>
           <Main />

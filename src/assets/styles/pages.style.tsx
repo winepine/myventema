@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 export const MobileCarouselDropdown = styled.div`
   @media (min-width: 990px) {
@@ -13,7 +13,7 @@ const OfferPageWrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
+  background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
   position: relative;
   padding: 100px 60px 60px;
   justify-content: space-between;
@@ -32,24 +32,24 @@ const HeaderSection = styled.div`
   flex-wrap: wrap;
   width: 100%;
   min-height: 400px;
-  background-color: ${themeGet('colors.gray.300', '#f4f4f4')};
+  background-color: ${themeGet("colors.gray.300", "#f4f4f4")};
 `;
 
 const MainContentArea = styled.main`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
+  background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
   padding-right: 0;
   transition: padding-right 0.35s ease-in-out;
 
   @media (max-width: 990px) {
-    background-color: ${themeGet('colors.white', '#ffffff')};
+    background-color: ${themeGet("colors.white", "#ffffff")};
   }
 `;
 
 const SidebarSection = styled.div`
-  background-color: ${themeGet('colors.white', '#ffffff')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
   width: 280px;
 
   @media (max-width: 990px) {
@@ -89,9 +89,9 @@ const OfferSection = styled.div`
   width: 100%;
   display: block;
   padding: 60px;
-  background-color: ${themeGet('colors.white', '#ffffff')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
   position: relative;
-  border-bottom: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  border-bottom: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
 
   @media (max-width: 1199px) and (min-width: 991px) {
     padding: 20px 15px;
@@ -118,12 +118,12 @@ const OfferSection = styled.div`
 `;
 
 const Heading = styled.h2`
-  font-size: ${themeGet('fontSizes.xl', '24')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89 ')};
+  font-size: ${themeGet("fontSizes.xl", "24")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.primary.regular", "#EA870E ")};
   padding: 0px 20px 20px;
   margin: 50px 10px 20px;
-  border-bottom: 2px solid ${themeGet('colors.primary.regular', '#FD5A89 ')};
+  border-bottom: 2px solid ${themeGet("colors.primary.regular", "#EA870E ")};
   width: auto;
   display: inline-block;
 `;
@@ -132,7 +132,7 @@ export const ProductsRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
-  background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
+  background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
 
   @media (max-width: 768px) {
     margin-left: -7.5px;

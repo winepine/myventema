@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
-import * as Yup from 'yup';
-import { closeModal } from '@redq/reuse-modal';
-import { FormikProps, ErrorMessage, Formik, Form } from 'formik';
+import React, { useContext } from "react";
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import * as Yup from "yup";
+import { closeModal } from "@redq/reuse-modal";
+import { FormikProps, ErrorMessage, Formik, Form } from "formik";
 // import { useMutation } from '@apollo/client';
-import MaskedInput from 'react-text-mask';
+import MaskedInput from "react-text-mask";
 // import { ProfileContext } from 'contexts/profile/profile.context';
-import { Button } from 'components/button/button';
+import { Button } from "components/button/button";
 // import { UPDATE_CONTACT } from 'graphql/mutation/contact';
-import { FieldWrapper, Heading } from './contact-card.style';
-import { FormattedMessage } from 'react-intl';
+import { FieldWrapper, Heading } from "./contact-card.style";
+import { FormattedMessage } from "react-intl";
 
 type Props = {
   item?: any | null;
@@ -23,14 +23,14 @@ type FormValues = {
 };
 
 const ContactValidationSchema = Yup.object().shape({
-  number: Yup.string().required('Number is required'),
+  number: Yup.string().required("Number is required"),
 });
 
 const CreateOrUpdateContact: React.FC<Props> = ({ item }) => {
   const initialValues = {
     id: item.id || null,
-    type: item.type || 'secondary',
-    number: item.number || '',
+    type: item.type || "secondary",
+    number: item.number || "",
   };
   // const [addContactMutation] = useMutation(UPDATE_CONTACT);
   // const { state, dispatch } = useContext(ProfileContext);
@@ -57,21 +57,21 @@ const CreateOrUpdateContact: React.FC<Props> = ({ item }) => {
       }: FormikProps<FormValues>) => (
         <Form>
           <Heading>
-            {item && item.id ? 'Edit Contact' : 'Add New Contact'}
+            {item && item.id ? "Edit Contact" : "Add New Contact"}
           </Heading>
           <FieldWrapper>
             <MaskedInput
               mask={[
-                '(',
+                "(",
                 /[1-9]/,
                 /\d/,
                 /\d/,
-                ')',
-                ' ',
+                ")",
+                " ",
                 /\d/,
                 /\d/,
                 /\d/,
-                '-',
+                "-",
                 /\d/,
                 /\d/,
                 /\d/,
@@ -95,7 +95,7 @@ const CreateOrUpdateContact: React.FC<Props> = ({ item }) => {
           <Button
             disabled={isSubmitting}
             type="submit"
-            style={{ width: '100%', height: '44px' }}
+            style={{ width: "100%", height: "44px" }}
           >
             <FormattedMessage
               id="savedContactId"
@@ -113,13 +113,13 @@ export default CreateOrUpdateContact;
 const StyledInput = styled.input`
   width: 100%;
   height: 54px;
-  border-radius: ${themeGet('radii.base', '6px')};
-  font-family: ${themeGet('fonts.body', 'Lato, sans-serif')};
-  border: 1px solid ${themeGet('colors.gray.700', '#e6e6e6')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  border-radius: ${themeGet("radii.base", "6px")};
+  font-family: ${themeGet("fonts.body", "Lato, sans-serif")};
+  border: 1px solid ${themeGet("colors.gray.700", "#e6e6e6")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   font-size: 16px;
   line-height: 19px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
+  font-weight: ${themeGet("fontWeights.regular", "400")};
   padding: 0 18px;
   box-sizing: border-box;
   transition: border-color 0.25s ease;
@@ -130,11 +130,11 @@ const StyledInput = styled.input`
   }
 
   &:focus {
-    border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    border-color: ${themeGet("colors.primary.regular", "#EA870E")};
   }
 
   &::placeholder {
-    color: ${themeGet('colors.text.regular', '#77798C')};
+    color: ${themeGet("colors.text.regular", "#77798C")};
   }
 `;
 

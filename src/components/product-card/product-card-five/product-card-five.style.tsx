@@ -1,13 +1,13 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
-import { Button } from 'components/button/button';
-import { Counter as Counters } from 'components/counter/counter';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { Button } from "components/button/button";
+import { Counter as Counters } from "components/counter/counter";
 
 export const CardWrapper = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
   display: flex;
   flex-direction: column;
 `;
@@ -21,7 +21,7 @@ export const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  background-color: ${themeGet('colors.white', '#ffffff')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
 
   img {
     max-width: 100%;
@@ -31,7 +31,7 @@ export const ImageWrapper = styled.div`
 
   &.overlay {
     &:after {
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
       display: inline-block;
@@ -56,10 +56,10 @@ export const InfoWrapper = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.regular', '#77798c')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.regular", "#77798c")};
   margin: 0 0 4px 0;
   width: 100%;
   overflow: hidden;
@@ -73,40 +73,40 @@ export const Title = styled.h3`
 `;
 
 export const Unit = styled.span`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.regular', '#77798c')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.regular", "#77798c")};
 
   @media (max-width: 767px) {
-    font-size: ${themeGet('fontSizes.xs', '12')}px;
+    font-size: ${themeGet("fontSizes.xs", "12")}px;
   }
 `;
 
 export const Price = styled.span`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   margin-bottom: 10px;
 
   @media (max-width: 767px) {
-    font-size: calc(${themeGet('fontSizes.base', '15')}px - 1px);
+    font-size: calc(${themeGet("fontSizes.base", "15")}px - 1px);
   }
 `;
 
 export const CartButton = styled(Button)`
-  background-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  background-color: ${themeGet("colors.primary.regular", "#EA870E")};
   border: 0;
-  color: ${themeGet('colors.white', '#ffffff')};
-  border-radius: ${themeGet('radii.big', '18px')};
+  color: ${themeGet("colors.white", "#ffffff")};
+  border-radius: ${themeGet("radii.big", "18px")};
   width: 40px;
   height: 40px;
   border-radius: 50%;
   padding-left: 0;
   padding-right: 0;
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
   position: absolute;
   bottom: 20px;
   right: 15px;
@@ -126,7 +126,7 @@ export const CartButton = styled(Button)`
     }
   }
   &:hover {
-    background-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    background-color: ${themeGet("colors.primary.regular", "#EA870E")};
   }
   svg {
     fill: currentColor;

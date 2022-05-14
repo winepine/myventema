@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
-import { Input } from 'components/forms/input';
+import React from "react";
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { Input } from "components/forms/input";
 const FieldWrapper = styled.div`
   textarea {
     height: auto;
@@ -12,10 +12,10 @@ const FieldWrapper = styled.div`
 `;
 
 const InputFeedback = styled.span`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.secondary.hover', '#FF282F')};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.secondary.hover", "#FF282F")};
   padding-top: 10px;
   display: flex;
   justify-content: flex-end;
@@ -40,7 +40,7 @@ const InputFeedback = styled.span`
 //   }
 
 //   &:focus {
-//     border-color: ${themeGet('colors.primary', '#FD5A89')};
+//     border-color: ${themeGet('colors.primary', '#EA870E')};
 //   }
 
 //   &::placeholder {
@@ -71,7 +71,7 @@ const TextField: React.FC<Props> = ({
   return (
     <FieldWrapper>
       {label && (
-        <label className='label' htmlFor={id}>
+        <label className="label" htmlFor={id}>
           {label}
         </label>
       )}

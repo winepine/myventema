@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 import {
   DeliveryInfo as DeliveryInfos,
   DeliveryAddress as DeliveryAddresses,
@@ -9,7 +9,7 @@ import {
   Price as Prices,
   ProgressWrapper as ProgressWrappers,
   OrderTable as OrderTables,
-} from '../order-details/order-details.style';
+} from "../order-details/order-details.style";
 
 export const Address = styled(Addresses)``;
 export const PriceRow = styled(PriceRows)``;
@@ -21,7 +21,7 @@ export const DeliveryInfo = styled(DeliveryInfos)`
 `;
 
 export const DeliveryAddress = styled(DeliveryAddresses)`
-  border-bottom: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  border-bottom: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
   border-right: 0;
 `;
 
@@ -40,29 +40,29 @@ export const OrderListHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  border-bottom: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
 `;
 
 export const TrackID = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
 
   span {
-    font-weight: ${themeGet('fontWeights.regular', '400')};
+    font-weight: ${themeGet("fontWeights.regular", "400")};
   }
 `;
 
 export const Status = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.blue.regular', '#2e70fa')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.blue.regular", "#2e70fa")};
   line-height: 1;
   background-color: rgba(46, 112, 250, 0.1);
   padding: 10px;
-  border-radius: ${themeGet('radii.base', '6px')};
+  border-radius: ${themeGet("radii.base", "6px")};
   text-transform: uppercase;
 `;
 
@@ -73,10 +73,10 @@ export const OrderMeta = styled.div`
 `;
 
 export const Meta = styled.div`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +84,7 @@ export const Meta = styled.div`
   margin-bottom: 15px;
 
   @media (max-width: 767px) {
-    font-size: ${themeGet('fontSizes.base', '15')}px;
+    font-size: ${themeGet("fontSizes.base", "15")}px;
   }
 
   &:last-child {
@@ -92,7 +92,7 @@ export const Meta = styled.div`
   }
 
   &.price {
-    font-weight: ${themeGet('fontWeights.bold', '700')};
+    font-weight: ${themeGet("fontWeights.bold", "700")};
   }
 `;
 
@@ -109,8 +109,8 @@ export const CardWrapper = styled.div`
 `;
 
 export const SingleOrderList = styled.div`
-  background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
-  border-radius: ${themeGet('radii.base', '6px')};
+  background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
+  border-radius: ${themeGet("radii.base", "6px")};
   overflow: hidden;
   margin-bottom: 15px;
   display: flex;
@@ -124,7 +124,7 @@ export const SingleOrderList = styled.div`
   }
 
   &.active {
-    border: 2px solid ${themeGet('colors.primary.regular', '#FD5A89')};
+    border: 2px solid ${themeGet("colors.primary.regular", "#EA870E")};
   }
 `;
 

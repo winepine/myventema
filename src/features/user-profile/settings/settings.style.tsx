@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
-import { Row as Rows, Col as Cols } from 'react-styled-flexboxgrid';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { Row as Rows, Col as Cols } from "react-styled-flexboxgrid";
 
 const SettingsForm = styled.div`
   width: 100%;
@@ -17,10 +17,10 @@ const HeadingSection = styled.div`
 `;
 
 const Title = styled.h3`
-  font-family: ${themeGet('fonts.heading', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.lg', '21')}px;
-  font-weight: ${themeGet('fontWeights.semiBold', '600')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.heading", "sans-serif")};
+  font-size: ${themeGet("fontSizes.lg", "21")}px;
+  font-weight: ${themeGet("fontWeights.semiBold", "600")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
 `;
 
 const SettingsFormContent = styled.div`
@@ -102,12 +102,12 @@ const ButtonGroup = styled.div`
     flex-shrink: 0;
     height: auto;
     min-height: 77px;
-    border: 1px dashed ${themeGet('colors.gray.500', '#f1f1f1')};
+    border: 1px dashed ${themeGet("colors.gray.500", "#f1f1f1")};
     margin-bottom: 15px;
     margin-left: 0;
     margin-right: auto;
     &:hover {
-      border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+      border-color: ${themeGet("colors.primary.regular", "#EA870E")};
     }
 
     @media (max-width: 700px) {

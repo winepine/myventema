@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 export const RightMenuBox = styled.div`
   display: flex;
   align-items: center;
@@ -12,10 +12,10 @@ export const RightMenuBox = styled.div`
 
   .menu-item {
     a {
-      font-family: ${themeGet('fonts.body', 'Lato')};
-      font-size: ${themeGet('fontSizes.base', '15')}px;
-      font-weight: ${themeGet('fontWeights.bold', '700')};
-      color: ${themeGet('colors.text.bold', '#0D1136')};
+      font-family: ${themeGet("fonts.body", "Lato")};
+      font-size: ${themeGet("fontSizes.base", "15")}px;
+      font-weight: ${themeGet("fontWeights.bold", "700")};
+      color: ${themeGet("colors.text.bold", "#0D1136")};
       line-height: 1.2em;
       display: block;
       transition: 0.15s ease-in-out;
@@ -25,13 +25,13 @@ export const RightMenuBox = styled.div`
 
       @media (max-width: 1400px) {
         margin-right: 20px;
-        font-size: ${themeGet('fontSizes.base', '15')}px;
+        font-size: ${themeGet("fontSizes.base", "15")}px;
       }
       &:hover {
-        color: ${themeGet('colors.primary.regular', '#FD5A89')};
+        color: ${themeGet("colors.primary.regular", "#EA870E")};
       }
       &.current-page {
-        color: ${themeGet('colors.primary.regular', '#FD5A89')};
+        color: ${themeGet("colors.primary.regular", "#EA870E")};
       }
     }
   }

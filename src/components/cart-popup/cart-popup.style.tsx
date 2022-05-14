@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
-const CartPopupButtonStyled = styled('button')`
+const CartPopupButtonStyled = styled("button")`
   height: 60px;
   width: auto;
   display: flex;
   align-items: center;
-  background-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  background-color: ${themeGet("colors.primary.regular", "#EA870E")};
   padding: 0;
   padding-left: 30px;
   border-radius: 60px;
-  box-shadow: ${themeGet('shadows.big', '0 21px 36px rgba(0, 0, 0, 0.16)')};
+  box-shadow: ${themeGet("shadows.big", "0 21px 36px rgba(0, 0, 0, 0.16)")};
   border: 0;
   outline: 0;
   cursor: pointer;
@@ -34,20 +34,20 @@ const CartPopupButtonStyled = styled('button')`
   }
 `;
 
-const ButtonImgBox = styled('span')`
-  color: ${themeGet('colors.white', '#ffffff')};
+const ButtonImgBox = styled("span")`
+  color: ${themeGet("colors.white", "#ffffff")};
 `;
 
-const ItemCount = styled('span')`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
+const ItemCount = styled("span")`
+  font-family: ${themeGet("fonts.body", "sans-serif")};
   font-size: 12px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.white', '#ffffff')};
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.white", "#ffffff")};
   padding-left: 5px;
   padding-right: 10px;
 `;
 
-const PriceBox = styled('span')`
+const PriceBox = styled("span")`
   width: 56px;
   height: 56px;
   overflow: hidden;
@@ -55,11 +55,11 @@ const PriceBox = styled('span')`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.xs', '12')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.xs", "12")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
   margin-right: 2px;
 
   @media (max-width: 767px) {
@@ -71,18 +71,18 @@ const PriceBox = styled('span')`
   }
 `;
 
-const CartPopupBoxButton = styled('button')`
+const CartPopupBoxButton = styled("button")`
   height: auto;
   width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  background-color: ${themeGet("colors.primary.regular", "#EA870E")};
   padding: 0;
-  border-radius: ${themeGet('radii.base', '6px')} 0 0
-    ${themeGet('radii.base', '6px')};
-  box-shadow: ${themeGet('shadows.big', '0 21px 36px rgba(0, 0, 0, 0.16)')};
+  border-radius: ${themeGet("radii.base", "6px")} 0 0
+    ${themeGet("radii.base", "6px")};
+  box-shadow: ${themeGet("shadows.big", "0 21px 36px rgba(0, 0, 0, 0.16)")};
   border: 0;
   outline: 0;
   cursor: pointer;
@@ -97,11 +97,11 @@ const CartPopupBoxButton = styled('button')`
   }
 `;
 
-const TotalItems = styled('span')`
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.white', '#ffffff')};
+const TotalItems = styled("span")`
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.white", "#ffffff")};
   padding-left: 5px;
   padding-right: 10px;
   display: flex;
@@ -114,20 +114,20 @@ const TotalItems = styled('span')`
   }
 `;
 
-const PriceBoxAlt = styled('span')`
+const PriceBoxAlt = styled("span")`
   width: auto;
   height: 35px;
   min-width: 80px;
   overflow: hidden;
-  border-radius: ${themeGet('radii.base', '6px')};
+  border-radius: ${themeGet("radii.base", "6px")};
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  font-family: ${themeGet('fonts.body', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
+  font-family: ${themeGet("fonts.body", "sans-serif")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
   margin: 0 10px 10px;
 `;
 

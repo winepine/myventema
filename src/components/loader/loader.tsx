@@ -1,6 +1,6 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const rotate = keyframes`
   from {transform: rotate(0deg);}
@@ -11,12 +11,12 @@ const Spinner = styled.div`
   margin-top: 30px;
   width: 24px;
   height: 24px;
-  border: 4px solid ${themeGet('colors.white', '#ffffff')};
+  border: 4px solid ${themeGet("colors.white", "#ffffff")};
   border-top: 3px solid
-    ${(props) =>
+    ${props =>
       props.color
         ? props.color
-        : themeGet('colors.primary.regular', '#FD5A89')};
+        : themeGet("colors.primary.regular", "#EA870E")};
   border-radius: 50%;
   transition-property: transform;
   animation-name: ${rotate};
@@ -25,7 +25,7 @@ const Spinner = styled.div`
   animation-timing-function: linear;
 `;
 
-const Loader = (color) => {
+const Loader = color => {
   return <Spinner {...color} />;
 };
 

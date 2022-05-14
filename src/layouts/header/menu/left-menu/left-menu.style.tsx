@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 export const LeftMenuBox = styled.div`
   display: flex;
@@ -22,15 +22,15 @@ export const IconWrapper = styled.span`
 `;
 
 export const MenuItem = styled.button`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   line-height: 1.2em;
   white-space: nowrap;
   display: block;
   padding: 12px 30px;
-  border-radius: ${themeGet('radii.base', '6px')};
+  border-radius: ${themeGet("radii.base", "6px")};
   transition: 0.15s ease-in-out;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ export const MenuItem = styled.button`
 
   @media (max-width: 1400px) {
     margin-right: 10px;
-    font-size: ${themeGet('fontSizes.base', '15')}px;
+    font-size: ${themeGet("fontSizes.base", "15")}px;
   }
 
   @media only screen and (min-width: 991px) and (max-width: 1200px) {
@@ -60,10 +60,10 @@ export const MenuItem = styled.button`
   }
 
   &:hover {
-    color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    color: ${themeGet("colors.primary.regular", "#EA870E")};
   }
   &.current-page {
-    color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    color: ${themeGet("colors.primary.regular", "#EA870E")};
     background-color: #fff;
   }
 `;
@@ -73,13 +73,13 @@ export const SelectedItem = styled.button`
   height: 38px;
   display: flex;
   align-items: center;
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
+  border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
-  border-radius: ${themeGet('radii.base', '6px')};
+  border-radius: ${themeGet("radii.base", "6px")};
   outline: 0;
   min-width: 150px;
   cursor: pointer;
@@ -93,10 +93,10 @@ export const SelectedItem = styled.button`
   span {
     display: flex;
     align-items: center;
-    font-family: ${themeGet('fonts.body', 'Lato')};
-    font-size: ${themeGet('fontSizes.base', '15')}px;
-    font-weight: ${themeGet('fontWeights.bold', '700')};
-    color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    font-family: ${themeGet("fonts.body", "Lato")};
+    font-size: ${themeGet("fontSizes.base", "15")}px;
+    font-weight: ${themeGet("fontWeights.bold", "700")};
+    color: ${themeGet("colors.primary.regular", "#EA870E")};
     text-decoration: none;
 
     &:first-child {

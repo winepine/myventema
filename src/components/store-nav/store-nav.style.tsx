@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const StoreNavWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   z-index: 1;
   position: relative;
-  background-color: ${themeGet('colors.white', '#ffffff')};
+  background-color: ${themeGet("colors.white", "#ffffff")};
   height: 55px;
 `;
 
@@ -27,11 +27,11 @@ export const StoreNavLinks = styled.div`
     a {
       display: flex;
       align-items: center;
-      font-size: calc(${themeGet('fontSizes.base', '15px')} - 1px);
-      font-weight: ${themeGet('fontWeights.bold', '700')};
-      color: ${themeGet('colors.text.regular', '#77798C')};
+      font-size: calc(${themeGet("fontSizes.base", "15px")} - 1px);
+      font-weight: ${themeGet("fontWeights.bold", "700")};
+      color: ${themeGet("colors.text.regular", "#77798C")};
       padding: 5px 9px;
-      border-radius: ${themeGet('radii.base', '6px')};
+      border-radius: ${themeGet("radii.base", "6px")};
       line-height: 1.2;
       white-space: nowrap;
 
@@ -41,8 +41,8 @@ export const StoreNavLinks = styled.div`
       }
 
       &.current-page {
-        color: ${themeGet('colors.primary.regular', '#FD5A89')};
-        background-color: ${themeGet('colors.gray.100', '#f9f9f9')};
+        color: ${themeGet("colors.primary.regular", "#EA870E")};
+        background-color: ${themeGet("colors.gray.100", "#f9f9f9")};
       }
     }
   }

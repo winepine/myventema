@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const DesktopView = styled.div`
   display: none;
@@ -32,7 +32,7 @@ const OrderListWrapper = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
   flex-shrink: 0;
   margin-right: 30px;
   overflow: hidden;
@@ -63,8 +63,8 @@ const OrderList = styled.div`
 
     > .rc-collapse-item {
       margin-bottom: 15px;
-      background-color: ${themeGet('colors.gray.200', '#f7f7f7')};
-      border-radius: ${themeGet('radii.base', '6px')};
+      background-color: ${themeGet("colors.gray.200", "#f7f7f7")};
+      border-radius: ${themeGet("radii.base", "6px")};
       overflow: hidden;
       margin-bottom: 15px;
       display: flex;
@@ -74,8 +74,8 @@ const OrderList = styled.div`
       border: 1px solid transparent;
 
       &.rc-collapse-item-active {
-        background-color: ${themeGet('colors.white', '#ffffff')};
-        border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+        background-color: ${themeGet("colors.white", "#ffffff")};
+        border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
       }
 
       > .rc-collapse-header {
@@ -100,14 +100,14 @@ const OrderDetailsWrapper = styled.div`
   min-height: calc(100vh - 190px);
   display: flex;
   flex-direction: column;
-  border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
+  border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
 `;
 
 const Title = styled.h3`
-  font-family: ${themeGet('fonts.heading', 'sans-serif')};
-  font-size: ${themeGet('fontSizes.lg', '21')}px;
-  font-weight: ${themeGet('fontWeights.semiBold', '600')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.heading", "sans-serif")};
+  font-size: ${themeGet("fontSizes.lg", "21")}px;
+  font-weight: ${themeGet("fontWeights.semiBold", "600")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   margin: 25px 0;
 `;
 
@@ -138,41 +138,41 @@ const ItemDetails = styled.span`
 `;
 
 const ItemName = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   margin-bottom: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   display: inline-block;
 `;
-const ItemSize = styled('span')`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.regular', '#77798c')};
+const ItemSize = styled("span")`
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.regular", "#77798c")};
   margin-bottom: 5px;
 `;
-const ItemPrice = styled('span')`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.primary.regular', '#FD5A89')};
+const ItemPrice = styled("span")`
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.primary.regular", "#EA870E")};
 `;
 
 const TotalPrice = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
 `;
 
 const NoOrderFound = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.regular', '#77798c')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.regular", "#77798c")};
   padding: 50px 0;
   display: flex;
   align-items: center;

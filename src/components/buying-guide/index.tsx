@@ -1,17 +1,33 @@
-import { Box, Button, Flex, Heading, HStack, Icon, Img, Stack, Text, Wrap } from '@chakra-ui/react'
-import * as React from 'react'
-import Banner from '../../../public/assets/images/banner/buying-guide.jpg'
-import Image from 'next/image'
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  HStack,
+  Icon,
+  Img,
+  Stack,
+  Text,
+  Wrap,
+} from "@chakra-ui/react";
+import * as React from "react";
+import Banner from "../../../public/assets/images/banner/buying-guide.jpg";
+import Image from "next/image";
 
-import { BiReset } from 'react-icons/bi';
-import Router from 'next/router';
-import {  } from 'react-icons/md'
+import { BiReset } from "react-icons/bi";
+import Router from "next/router";
+import {} from "react-icons/md";
 
 const App = () => {
   return (
     <Box bg="gray.800" as="section" h="full" position="relative">
       <Box py={{ base: "10", md: "14" }} position="relative" zIndex={1}>
-        <Flex justify={"center"} maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
+        <Flex
+          justify={"center"}
+          maxW={{ base: "xl", md: "7xl" }}
+          mx="auto"
+          px={{ base: "6", md: "8" }}
+        >
           <Stack align="center">
             <Heading color="white" mb="4" textAlign="center">
               Δοκιμάστε τον βοηθό αγοράς
@@ -22,12 +38,12 @@ const App = () => {
               // leftIcon={<Icon fontSize="18" as={MdFaceRetouchingNatural}/>}
               w="max"
               // variant="outline"
-              _hover={{ 
+              _hover={{
                 bg: "primary",
-                borderColor: '#FD5A89',
-              }} 
-              // _active={{ bg: "transparent" }} 
-              _focus={{ boxShadow: 'none' }}
+                borderColor: "#EA870E",
+              }}
+              // _active={{ bg: "transparent" }}
+              _focus={{ boxShadow: "none" }}
               onClick={() => Router.push("/buying-guide")}
               // onClick={handleResetTags}
             >
@@ -66,7 +82,7 @@ const App = () => {
         </Box>
       </Flex>
     </Box>
-  )
-}
+  );
+};
 
-export default App
+export default App;

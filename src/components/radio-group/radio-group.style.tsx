@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const RadioGroupWrapper = styled.div`
   display: flex;
@@ -9,17 +9,17 @@ const RadioGroupWrapper = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: ${themeGet('radii.base', '6px')};
-    background-color: ${themeGet('colors.gray.200', '#F7F7F7')};
-    border: 1px solid ${themeGet('colors.gray.200', '#F7F7F7')};
+    border-radius: ${themeGet("radii.base", "6px")};
+    background-color: ${themeGet("colors.gray.200", "#F7F7F7")};
+    border: 1px solid ${themeGet("colors.gray.200", "#F7F7F7")};
     text-align: center;
     padding: 15px 20px;
     position: relative;
-    font-family: ${themeGet('fonts.body', 'Lato')};
-    font-size: ${themeGet('fontSizes.sm', '13')}px;
-    font-weight: ${themeGet('fontWeights.regular', '400')};
-    color: ${themeGet('colors.text.bold', '#0D1136')};
-    font-size: calc(${themeGet('fontSizes.base', '15')}px - 1px);
+    font-family: ${themeGet("fonts.body", "Lato")};
+    font-size: ${themeGet("fontSizes.sm", "13")}px;
+    font-weight: ${themeGet("fontWeights.regular", "400")};
+    color: ${themeGet("colors.text.bold", "#0D1136")};
+    font-size: calc(${themeGet("fontSizes.base", "15")}px - 1px);
     line-height: 24px;
     max-width: 240px;
     cursor: pointer;
@@ -27,8 +27,8 @@ const RadioGroupWrapper = styled.div`
     transition: all 0.25s ease;
 
     &.active {
-      border: 1px solid ${themeGet('colors.primary.regular', '#FD5A89')};
-      background-color: ${themeGet('colors.white', '#ffffff')};
+      border: 1px solid ${themeGet("colors.primary.regular", "#EA870E")};
+      background-color: ${themeGet("colors.white", "#ffffff")};
     }
 
     &.disabled {
@@ -48,7 +48,7 @@ const RadioGroupWrapper = styled.div`
       margin-right: 0;
     }
 
-    input[type='radio']:checked & label {
+    input[type="radio"]:checked & label {
       opacity: 0;
       visibility: hidden;
       position: absolute;
@@ -66,10 +66,10 @@ const RadioGroupWrapper = styled.div`
 `;
 
 export const RadioTitle = styled.h3`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   line-height: 1.2;
   margin-bottom: 5px;
 `;
@@ -99,13 +99,13 @@ export const ActionButton = styled.button`
   cursor: pointer;
   outline: 0;
   padding: 0;
-  color: ${themeGet('colors.white', '#ffffff')};
+  color: ${themeGet("colors.white", "#ffffff")};
 
   &.edit-btn {
-    background-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    background-color: ${themeGet("colors.primary.regular", "#EA870E")};
   }
   &.close-btn {
-    background-color: ${themeGet('colors.secondary.regular', '#ff5b60')};
+    background-color: ${themeGet("colors.secondary.regular", "#ff5b60")};
   }
 
   svg {
@@ -115,6 +115,6 @@ export const ActionButton = styled.button`
   }
 `;
 
-RadioGroupWrapper.displayName = 'RadioGroupWrapper';
+RadioGroupWrapper.displayName = "RadioGroupWrapper";
 
 export default RadioGroupWrapper;

@@ -1,12 +1,12 @@
-import React from 'react';
-import { themeGet } from '@styled-system/theme-get';
-import Carousel from 'react-multi-carousel';
-import styled from 'styled-components';
-import Image from 'next/image'
+import React from "react";
+import { themeGet } from "@styled-system/theme-get";
+import Carousel from "react-multi-carousel";
+import styled from "styled-components";
+import Image from "next/image";
 
 const SingleItem = styled.li`
-  border: 1px solid ${themeGet('colors.gray.500', '#f1f1f1')};
-  border-radius: ${themeGet('radii.base', '6px')};
+  border: 1px solid ${themeGet("colors.gray.500", "#f1f1f1")};
+  border-radius: ${themeGet("radii.base", "6px")};
   margin-right: 20px;
   padding: 0;
   outline: none;
@@ -19,7 +19,7 @@ const SingleItem = styled.li`
   }
 
   &.custom-dot--active {
-    border: 2px solid ${themeGet('colors.primary.regular', '#FD5A89')};
+    border: 2px solid ${themeGet("colors.primary.regular", "#EA870E")};
   }
 `;
 const responsive = {
@@ -52,21 +52,21 @@ const CarouselWithCustomDots = ({
   title,
   ...rest
 }: any) => {
-  console.log({ itemURL: items.url })
+  console.log({ itemURL: items.url });
   const children = items.slice(0, 6).map((item: any, index: number) => (
     <img
       src={item.url}
       key={index}
       alt={title}
       style={{
-        minWidth: 'auto',
-        height: 'auto',
-        position: 'relative',
-        margin: 'auto',
+        minWidth: "auto",
+        height: "auto",
+        position: "relative",
+        margin: "auto",
       }}
-      className='product-image'
+      className="product-image"
     />
-    // <Image 
+    // <Image
     //   key={index}
     //   src={item.url}
     //   alt={title}
@@ -80,7 +80,7 @@ const CarouselWithCustomDots = ({
       src={item.url}
       key={index}
       alt={title}
-      style={{ width: '100%', height: '100%', position: 'relative' }}
+      style={{ width: "100%", height: "100%", position: "relative" }}
     />
   ));
   const CustomDot = ({
@@ -94,18 +94,18 @@ const CarouselWithCustomDots = ({
         data-index={index}
         key={index}
         onClick={() => onClick()}
-        className={`custom-dot ${active && 'custom-dot--active'}`}
+        className={`custom-dot ${active && "custom-dot--active"}`}
       >
         {React.Children.toArray(images)[index]}
       </SingleItem>
     );
   };
-  let deviceType = 'desktop';
+  let deviceType = "desktop";
   if (mobile) {
-    deviceType = 'mobile';
+    deviceType = "mobile";
   }
   if (tablet) {
-    deviceType = 'tablet';
+    deviceType = "tablet";
   }
   return (
     <Carousel
@@ -113,7 +113,7 @@ const CarouselWithCustomDots = ({
       ssr
       infinite={true}
       slidesToSlide={1}
-      containerClass='carousel-with-custom-dots'
+      containerClass="carousel-with-custom-dots"
       responsive={responsive}
       deviceType={deviceType}
       autoPlay={false}

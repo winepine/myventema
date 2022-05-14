@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 export const Wrapper = styled.div`
   > div {
@@ -9,10 +9,10 @@ export const Wrapper = styled.div`
     justify-content: space-between;
 
     > label {
-      color: ${themeGet('colors.text.bold', '#0D1136')};
-      font-size: calc(${themeGet('fontSizes.base', '15')}px + 1px);
+      color: ${themeGet("colors.text.bold", "#0D1136")};
+      font-size: calc(${themeGet("fontSizes.base", "15")}px + 1px);
       line-height: 19px;
-      font-weight: ${themeGet('fontWeights.bold', '700')};
+      font-weight: ${themeGet("fontWeights.bold", "700")};
     }
   }
 
@@ -27,16 +27,16 @@ export const Wrapper = styled.div`
     }
 
     input,
-    input[type='text'] {
+    input[type="text"] {
       width: 100%;
       height: 54px;
-      border-radius: ${themeGet('radii.base', '6px')};
-      font-family: ${themeGet('fonts.body', 'Lato')};
-      border: 1px solid ${themeGet('colors.gray.700', '#e6e6e6')};
-      color: ${themeGet('colors.text.bold', '#0D1136')};
-      font-size: calc(${themeGet('fontSizes.base', '15')}px + 1px);
+      border-radius: ${themeGet("radii.base", "6px")};
+      font-family: ${themeGet("fonts.body", "Lato")};
+      border: 1px solid ${themeGet("colors.gray.700", "#e6e6e6")};
+      color: ${themeGet("colors.text.bold", "#0D1136")};
+      font-size: calc(${themeGet("fontSizes.base", "15")}px + 1px);
       line-height: 19px;
-      font-weight: ${themeGet('fontWeights.regular', '400')};
+      font-weight: ${themeGet("fontWeights.regular", "400")};
       padding: 0 18px;
       box-sizing: border-box;
       transition: border-color 0.25s ease;
@@ -48,11 +48,11 @@ export const Wrapper = styled.div`
       }
 
       &:focus {
-        border-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+        border-color: ${themeGet("colors.primary.regular", "#EA870E")};
       }
 
       &::placeholder {
-        color: ${themeGet('colors.text.regular', '#77798C')};
+        color: ${themeGet("colors.text.regular", "#77798C")};
       }
     }
   }
@@ -71,8 +71,8 @@ export const Wrapper = styled.div`
       .search-icon {
         width: 45px;
         height: 100%;
-        font-size: ${themeGet('fontSizes.base', '15')}px;
-        color: ${themeGet('colors.text.regular', '#77798C')};
+        font-size: ${themeGet("fontSizes.base", "15")}px;
+        color: ${themeGet("colors.text.regular", "#77798C")};
         display: flex;
         align-items: center;
         justify-content: center;

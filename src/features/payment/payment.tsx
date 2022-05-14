@@ -168,9 +168,9 @@ const Payment = ({
         {/* <CheckoutSubmit> */}
         <Button
           mt="6"
-          bg="#FD5A89"
+          bg="#EA870E"
           color="white"
-          _hover={{ bg: "#FD5A89", color: "white" }}
+          _hover={{ bg: "#EA870E", color: "white" }}
           w="full"
           isLoading={orderLoading}
           isDisabled={!formik.isValid || !agreedOnTermsAndCondtions}

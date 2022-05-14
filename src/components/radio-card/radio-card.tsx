@@ -1,34 +1,34 @@
-import React from 'react';
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
-import { CloseIcon } from 'assets/icons/CloseIcon';
-import { PencilIcon } from 'assets/icons/PencilIcon';
+import React from "react";
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { CloseIcon } from "assets/icons/CloseIcon";
+import { PencilIcon } from "assets/icons/PencilIcon";
 
 const CardWrapper = styled.label`
   display: inline-flex;
   align-items: center;
   /* justify-content: center; */
-  border-radius: ${themeGet('radii.base', '6px')};
-  background-color: ${themeGet('colors.gray.200', '#F7F7F7')};
-  border: 1px solid ${themeGet('colors.gray.200', '#F7F7F7')};
+  border-radius: ${themeGet("radii.base", "6px")};
+  background-color: ${themeGet("colors.gray.200", "#F7F7F7")};
+  border: 1px solid ${themeGet("colors.gray.200", "#F7F7F7")};
   text-align: center;
   padding: 15px 20px;
   margin-bottom: 15px;
   margin-right: 15px;
   position: relative;
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   line-height: 24px;
-  // max-width: 240px; 
+  // max-width: 240px;
   cursor: pointer;
   width: 100%;
   transition: all 0.25s ease;
 
   &.active {
-    border: 1px solid ${themeGet('colors.primary.regular', '#FD5A89')};
-    background-color: ${themeGet('colors.white', '#ffffff')};
+    border: 1px solid ${themeGet("colors.primary.regular", "#EA870E")};
+    background-color: ${themeGet("colors.white", "#ffffff")};
   }
 
   &.disabled {
@@ -47,7 +47,7 @@ const CardWrapper = styled.label`
     margin-right: 0;
   }
 
-  input[type='radio'] {
+  input[type="radio"] {
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -63,20 +63,20 @@ const CardWrapper = styled.label`
   }
 `;
 const CardTitle = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.sm', '13')}px;
-  font-weight: ${themeGet('fontWeights.bold', '700')};
-  color: ${themeGet('colors.text.bold', '#0D1136')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.sm", "13")}px;
+  font-weight: ${themeGet("fontWeights.bold", "700")};
+  color: ${themeGet("colors.text.bold", "#0D1136")};
   line-height: 1.2;
   margin-bottom: 5px;
   text-transform: capitalize;
 `;
 
 const CardContent = styled.span`
-  font-family: ${themeGet('fonts.body', 'Lato')};
-  font-size: ${themeGet('fontSizes.base', '15')}px;
-  font-weight: ${themeGet('fontWeights.regular', '400')};
-  color: ${themeGet('colors.text.medium', '#424561')};
+  font-family: ${themeGet("fonts.body", "Lato")};
+  font-size: ${themeGet("fontSizes.base", "15")}px;
+  font-weight: ${themeGet("fontWeights.regular", "400")};
+  color: ${themeGet("colors.text.medium", "#424561")};
 `;
 
 const CardButtons = styled.span`
@@ -104,13 +104,13 @@ const ActionButton = styled.span`
   cursor: pointer;
   outline: 0;
   padding: 0;
-  color: ${themeGet('colors.white', '#ffffff')};
+  color: ${themeGet("colors.white", "#ffffff")};
 
   &.edit-btn {
-    background-color: ${themeGet('colors.primary.regular', '#FD5A89')};
+    background-color: ${themeGet("colors.primary.regular", "#EA870E")};
   }
   &.delete-btn {
-    background-color: ${themeGet('colors.secondary.regular', '#ff5b60')};
+    background-color: ${themeGet("colors.secondary.regular", "#ff5b60")};
   }
 
   svg {
@@ -155,11 +155,11 @@ const RadioCard: React.FC<RadioCardProps> = ({
   return (
     <CardWrapper
       htmlFor={`${name}-${id}`}
-      className={`label ${title ? 'item-has-title' : 'no_title'}
-      ${checked ? 'active' : 'not_active'}`}
+      className={`label ${title ? "item-has-title" : "no_title"}
+      ${checked ? "active" : "not_active"}`}
     >
       <input
-        type='radio'
+        type="radio"
         id={`${name}-${id}`}
         name={name}
         value={content}
@@ -170,9 +170,9 @@ const RadioCard: React.FC<RadioCardProps> = ({
       {title && <CardTitle>{title}</CardTitle>}
       {content && <CardContent>{content}</CardContent>}
       {withActionButtons && (
-        <CardButtons className='button-wrapper'>
+        <CardButtons className="button-wrapper">
           {hasEdit && (
-            <ActionButton onClick={onEdit} className='edit-btn'>
+            <ActionButton onClick={onEdit} className="edit-btn">
               {editIcon}
             </ActionButton>
           )}
@@ -187,8 +187,8 @@ const RadioCard: React.FC<RadioCardProps> = ({
   );
 };
 RadioCard.defaultProps = {
-  title: '',
-  content: '',
+  title: "",
+  content: "",
   editIcon: <PencilIcon />,
   deleteIcon: <CloseIcon />,
   withActionButtons: true,

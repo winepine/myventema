@@ -1,12 +1,14 @@
-import React from 'react'
-import { FC } from 'react'
-import { useNProgress } from '@tanem/react-nprogress';
+import React from "react";
+import { FC } from "react";
+import { useNProgress } from "@tanem/react-nprogress";
 
 interface Props {
-  isRouteChanging: boolean
+  isRouteChanging: boolean;
 }
-const NProgressbar:FC<Props> = ({ isRouteChanging }) => {
-  const { animationDuration, isFinished, progress } = useNProgress({ isAnimating: isRouteChanging });
+const NProgressbar: FC<Props> = ({ isRouteChanging }) => {
+  const { animationDuration, isFinished, progress } = useNProgress({
+    isAnimating: isRouteChanging,
+  });
 
   return (
     <>
@@ -18,7 +20,7 @@ const NProgressbar:FC<Props> = ({ isRouteChanging }) => {
         }
 
         .bar {
-          background: #FD5A89;
+          background: #ea870e;
           height: 2px;
           left: 0;
           margin-left: ${(-1 + progress) * 100}%;
@@ -30,7 +32,7 @@ const NProgressbar:FC<Props> = ({ isRouteChanging }) => {
         }
 
         .spinner {
-          box-shadow: 0 0 10px #FD5A89, 0 0 5px #FD5A89;
+          box-shadow: 0 0 10px #ea870e, 0 0 5px #ea870e;
           display: block;
           height: 100%;
           opacity: 1;
@@ -46,7 +48,7 @@ const NProgressbar:FC<Props> = ({ isRouteChanging }) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NProgressbar
+export default NProgressbar;

@@ -1,9 +1,19 @@
-import { Box, HStack, Square,  Wrap, Stack, Heading, Link, Text, WrapItem } from '@chakra-ui/layout'
-import { Image, Button } from '@chakra-ui/react';
-import { useCart } from 'contexts/cart/use-cart';
-import useProductLink from 'hooks/useProductLink';
-import React from 'react'
-import { CartIcon } from 'assets/icons/CartIcon';
+import {
+  Box,
+  HStack,
+  Square,
+  Wrap,
+  Stack,
+  Heading,
+  Link,
+  Text,
+  WrapItem,
+} from "@chakra-ui/layout";
+import { Image, Button } from "@chakra-ui/react";
+import { useCart } from "contexts/cart/use-cart";
+import useProductLink from "hooks/useProductLink";
+import React from "react";
+import { CartIcon } from "assets/icons/CartIcon";
 
 const BumpCard = ({ product }) => {
   const { addItem } = useCart();
@@ -13,7 +23,7 @@ const BumpCard = ({ product }) => {
     <Box p="4" bg="white" border="1px" borderColor="gray.300" rounded="md">
       <HStack>
         <Square size="4rem">
-          <Image 
+          <Image
             src={product.images?.[0]?.src}
             w="full"
             h="full"
@@ -32,19 +42,19 @@ const BumpCard = ({ product }) => {
                 {"€ "}
                 {product.sale_rice ? product.sale_price : product.regular_price}
               </Text>
-              <Button 
+              <Button
                 size="sm"
                 onClick={() => addItem(product)}
                 leftIcon={<CartIcon mr={2} />}
-                bg="#FD5A89"
+                bg="#EA870E"
                 color="white"
-                _hover={{  
-                  bg: '#FD5A89',
-                  color: "white"
+                _hover={{
+                  bg: "#EA870E",
+                  color: "white",
                 }}
-                _active={{  
-                  bg: '#FD5A89',
-                  color: "white"
+                _active={{
+                  bg: "#EA870E",
+                  color: "white",
                 }}
               >
                 Προσθήκη στο καλάθι
@@ -56,7 +66,7 @@ const BumpCard = ({ product }) => {
         </Wrap>
       </HStack>
     </Box>
-  )
-}
+  );
+};
 
-export default BumpCard
+export default BumpCard;

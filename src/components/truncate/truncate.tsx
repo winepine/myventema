@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 type ReadMoreProps = {
   more?: string;
@@ -7,10 +7,10 @@ type ReadMoreProps = {
 };
 
 const ReadMore = ({ children, more, less, character }) => {
-// const ReadMore = ({ more, less, character, }) => {
+  // const ReadMore = ({ more, less, character, }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const toggleLines = (event) => {
+  const toggleLines = event => {
     event.preventDefault();
     setExpanded(!expanded);
   };
@@ -20,15 +20,15 @@ const ReadMore = ({ children, more, less, character }) => {
   // if (!description) return null;
 
   function createMarkup() {
-    return {__html: children};
+    return { __html: children };
   }
 
   return (
     <>
       {(children && children.length < character) || expanded
         ? children
-        // ? <div style={{ fontSize: 17, marginTop: '15px' }} dangerouslySetInnerHTML={createMarkup()} /> 
-        : children.substring(0, character)}
+        : // ? <div style={{ fontSize: 17, marginTop: '15px' }} dangerouslySetInnerHTML={createMarkup()} />
+          children.substring(0, character)}
       {children && children.length > character && !expanded && (
         <>
           <br />
@@ -36,7 +36,7 @@ const ReadMore = ({ children, more, less, character }) => {
             <a
               href="#"
               onClick={toggleLines}
-              style={{ color: '#FD5A89', fontWeight: 'bold' }}
+              style={{ color: "#EA870E", fontWeight: "bold" }}
             >
               {more}
             </a>
@@ -50,7 +50,7 @@ const ReadMore = ({ children, more, less, character }) => {
             <a
               href="#"
               onClick={toggleLines}
-              style={{ color: '#FD5A89', fontWeight: 'bold' }}
+              style={{ color: "#EA870E", fontWeight: "bold" }}
             >
               {less}
             </a>
@@ -63,8 +63,8 @@ const ReadMore = ({ children, more, less, character }) => {
 
 ReadMore.defaultProps = {
   character: 150,
-  more: 'Read more',
-  less: 'less',
+  more: "Read more",
+  less: "less",
 };
 
 export default ReadMore;
