@@ -1,27 +1,51 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import { CardHeader } from 'components/card-header/card-header';
+import { CardHeader } from "components/card-header/card-header";
 
-import { Box as ChakraBox, Checkbox, Textarea, Stack, FormControl, FormLabel, Divider, Wrap, Heading, Text, SimpleGrid, ScaleFade, RadioGroup, Radio, Select } from '@chakra-ui/react';
-import { useState } from 'react';
-import { FC } from 'react';
-import CustomSelectField from 'components/common/CustomSelectField';
-import FormikInputField from 'components/common/FormikInputField';
-import { FormikProps } from 'formik';
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import {
+  Box as ChakraBox,
+  Checkbox,
+  Textarea,
+  Stack,
+  FormControl,
+  FormLabel,
+  Divider,
+  Wrap,
+  Heading,
+  Text,
+  SimpleGrid,
+  ScaleFade,
+  RadioGroup,
+  Radio,
+  Select,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import { FC } from "react";
+import CustomSelectField from "components/common/CustomSelectField";
+import FormikInputField from "components/common/FormikInputField";
+import { FormikProps } from "formik";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 interface Props {
-  increment?: boolean
-  formik?: FormikProps<any>
-  submitTriggered?: boolean
-  selectedShippingLine: string
-  setIsSubmitTriggered?: (e) => void
-  onShowAddressSection?: (e) => void
-  onSelectedShippingLine?: (value: string) => void
+  increment?: boolean;
+  formik?: FormikProps<any>;
+  submitTriggered?: boolean;
+  selectedShippingLine: string;
+  setIsSubmitTriggered?: (e) => void;
+  onShowAddressSection?: (e) => void;
+  onSelectedShippingLine?: (value: string) => void;
 }
 
-const Schedules = ({ selectedShippingLine, onSelectedShippingLine, submitTriggered, setIsSubmitTriggered, increment = false, formik, onShowAddressSection }: Props) => {
+const Schedules = ({
+  selectedShippingLine,
+  onSelectedShippingLine,
+  submitTriggered,
+  setIsSubmitTriggered,
+  increment = false,
+  formik,
+  onShowAddressSection,
+}: Props) => {
   const [showAddressSection, setShowAddressSection] = useState(false);
   // Refs
   const nameRef = useRef<HTMLInputElement>(null);
@@ -37,52 +61,54 @@ const Schedules = ({ selectedShippingLine, onSelectedShippingLine, submitTrigger
     if (formik.errors.name_2 && formik.touched.name_2) {
       nameRef?.current?.focus();
       setIsSubmitTriggered(false);
-      return
-    } 
+      return;
+    }
     if (formik.errors.surname_2 && formik.touched.surname_2) {
       surnameRef?.current?.focus();
       setIsSubmitTriggered(false);
-      return
-    } 
+      return;
+    }
     if (formik.errors.address_2 && formik.touched.address_2) {
       addressRef?.current?.focus();
       setIsSubmitTriggered(false);
-      return
-    } 
+      return;
+    }
     if (formik.errors.city_2 && formik.touched.city_2) {
       cityRef?.current?.focus();
       setIsSubmitTriggered(false);
-      return
-    } 
+      return;
+    }
     if (formik.errors.postalCode_2 && formik.touched.postalCode_2) {
       postalCodeRef?.current?.focus();
       setIsSubmitTriggered(false);
-      return
-    } 
-  }, [formik, submitTriggered])
+      return;
+    }
+  }, [formik, submitTriggered]);
 
   return (
     <>
       <CardHeader increment={increment}>
         <ChakraBox display="flex" justifyContent="center" alignItems="center">
-          <Checkbox 
-            onChange={(e) => {
+          <Checkbox
+            onChange={e => {
               setShowAddressSection(e.currentTarget.checked);
               onShowAddressSection(e.currentTarget.checked);
-            }} 
+            }}
             fontWeight="bold"
-          >Αποστολή σε διαφορετική διεύθυνση;</Checkbox>
+          >
+            Αποστολή σε διαφορετική διεύθυνση;
+          </Checkbox>
         </ChakraBox>
       </CardHeader>
 
-      {showAddressSection && 
+      {showAddressSection && (
         <ScaleFade unmountOnExit in={true}>
           {/* <AddressSection 
             formik={formik}
           /> */}
           <Stack spacing="3">
             <SimpleGrid columns={{ base: 1, sm: 2 }} spacing="5">
-              <FormikInputField 
+              <FormikInputField
                 ref={nameRef}
                 label="Όνομα"
                 name="name_2"
@@ -97,13 +123,13 @@ const Schedules = ({ selectedShippingLine, onSelectedShippingLine, submitTrigger
                 formik={formik}
               />
             </SimpleGrid>
-            <FormikInputField 
+            <FormikInputField
               label="Όνομα Εταιρείας (προαιρετικό)"
               name="companyName_2"
               formik={formik}
             />
             <Stack spacing="3">
-              <FormikInputField 
+              <FormikInputField
                 ref={addressRef}
                 label="Διεύθυνση"
                 name="address_2"
@@ -111,17 +137,16 @@ const Schedules = ({ selectedShippingLine, onSelectedShippingLine, submitTrigger
                 isRequired
                 formik={formik}
               />
-              
             </Stack>
-            
-            <FormikInputField 
+
+            <FormikInputField
               ref={cityRef}
               label="Πόλη"
               name="city_2"
               isRequired
               formik={formik}
             />
-            <FormikInputField 
+            <FormikInputField
               ref={regionRef}
               label="Περιοχή"
               name="region_2"
@@ -133,9 +158,9 @@ const Schedules = ({ selectedShippingLine, onSelectedShippingLine, submitTrigger
               isRequired
               options={["Αττική", "Εύβοια", "etc"]}
             /> */}
-            <FormikInputField 
+            <FormikInputField
               ref={postalCodeRef}
-              type='string'
+              type="string"
               label="Ταχυδρομικός Κώδικας"
               name="postalCode_2"
               isRequired
@@ -143,14 +168,12 @@ const Schedules = ({ selectedShippingLine, onSelectedShippingLine, submitTrigger
             />
             <FormControl>
               <FormLabel>Σημειώσεις παραγγελίας (προαιρετικό)</FormLabel>
-              <Textarea 
-                placeholder=""
-              />
+              <Textarea placeholder="" />
             </FormControl>
           </Stack>
         </ScaleFade>
-      }
-      <DeliverySection 
+      )}
+      <DeliverySection
         selectedShippingLine={selectedShippingLine}
         onSelectedShippingLine={onSelectedShippingLine}
       />
@@ -160,18 +183,26 @@ const Schedules = ({ selectedShippingLine, onSelectedShippingLine, submitTrigger
 
 interface DeliverySectionProps {
   onSelectedShippingLine: (value: string) => void;
-  selectedShippingLine: string
+  selectedShippingLine: string;
 }
-const DeliverySection: FC<DeliverySectionProps> = ({ selectedShippingLine, onSelectedShippingLine }) => {
+const DeliverySection: FC<DeliverySectionProps> = ({
+  selectedShippingLine,
+  onSelectedShippingLine,
+}) => {
   return (
-    <ChakraBox mt="8" py="2" borderTop="1px"  borderColor="gray.200">
+    <ChakraBox mt="8" py="2" borderTop="1px" borderColor="gray.200">
       <Wrap justify="space-between" align="center">
-        <Text fontSize="md" fontWeight="bold">Αποστολή</Text>
+        <Text fontSize="md" fontWeight="bold">
+          Αποστολή
+        </Text>
 
-        <RadioGroup onChange={(value) => onSelectedShippingLine(value)} defaultValue={selectedShippingLine}>
+        <RadioGroup
+          onChange={value => onSelectedShippingLine(value)}
+          defaultValue={selectedShippingLine}
+        >
           <Stack fontWeight="bold" fontSize="sm" align="flex-end">
             <Radio value="acs_courier">
-              <Text align="right">ACS Courier: 3.50&euro;</Text>
+              <Text align="right">Courier (δικό μας μέσο): 3&euro;</Text>
             </Radio>
             <Radio value="pay_in_store">
               <Text align="right">Παραλαβή από το Ιατρείο</Text>
@@ -183,7 +214,7 @@ const DeliverySection: FC<DeliverySectionProps> = ({ selectedShippingLine, onSel
         </RadioGroup>
       </Wrap>
     </ChakraBox>
-  )
-}
+  );
+};
 
 export default Schedules;

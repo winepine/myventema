@@ -1,33 +1,37 @@
 import axios from "axios";
 
 export async function createOrder(data, cartItems) {
-  const customerFromLocalStorage = JSON.parse(localStorage.getItem('customer'));
+  const customerFromLocalStorage = JSON.parse(localStorage.getItem("customer"));
 
   // console.log({ data });
 
   // Let's decide which shipping line is need to use
-  let shippingLine = {}
+  let shippingLine = {};
   if (data.selectedShippingLine === "acs_courier") {
     shippingLine = {
       method_id: "flat_rate",
-      method_title: "ACS Courier",
-      total: "3.50"
-    }
+      method_title: "Courier (δικό μας μέσο)",
+      total: "3",
+    };
   } else {
     shippingLine = {
       method_id: "local_pickup",
       method_title: "Παραλαβή από το κατάστημα", // collect from the store
-      total: "0.00"
-    }
+      total: "0.00",
+    };
   }
 
   const fee_lines = [
     // Adding conditional object in array
-    ...(data.selectedPaymentOptionValue === 'pay on delivery' ? [{
-      name: "Αντικαταβολή", // 'Αντικαταβολή' --> Cash on 
-      total: "2.00",
-    }] : []),
-  ]
+    ...(data.selectedPaymentOptionValue === "pay on delivery"
+      ? [
+          {
+            name: "Αντικαταβολή", // 'Αντικαταβολή' --> Cash on
+            total: "2.00",
+          },
+        ]
+      : []),
+  ];
 
   const orderData = {
     status: "processing",
@@ -46,7 +50,7 @@ export async function createOrder(data, cartItems) {
       postcode: data?.postalCode?.toString(),
       country: "gr",
       email: data.email,
-      phone: data.phoneNumber
+      phone: data.phoneNumber,
     },
     shipping: {
       first_name: data?.name_2 || data.name,
@@ -59,24 +63,30 @@ export async function createOrder(data, cartItems) {
       postcode: data?.postalCode_2?.toString() || data?.postalCode?.toString(),
       country: "gr",
     },
-    line_items: cartItems.map(item => ({ product_id: item.id, quantity: item.quantity })),
+    line_items: cartItems.map(item => ({
+      product_id: item.id,
+      quantity: item.quantity,
+    })),
     shipping_lines: [shippingLine],
-    fee_lines: fee_lines
+    fee_lines: fee_lines,
   };
 
   try {
-    const res = await axios.post(`${process.env.NEXT_PUBLIC_DOMAIN_URL}/wp-json/wc/v3/orders?consumer_key=${process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY}&consumer_secret=${process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET}`, orderData)
-    console.log("/order :: ", { res })
+    const res = await axios.post(
+      `${process.env.NEXT_PUBLIC_DOMAIN_URL}/wp-json/wc/v3/orders?consumer_key=${process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY}&consumer_secret=${process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET}`,
+      orderData
+    );
+    console.log("/order :: ", { res });
 
     return {
       status: res.status,
       resData: res.data,
       // status: 201
-    }  
+    };
   } catch (error) {
     console.log({ error });
     return {
-      error: error.message
-    }
+      error: error.message,
+    };
   }
 }
