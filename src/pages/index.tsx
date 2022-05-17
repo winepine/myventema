@@ -6,11 +6,10 @@ import styled from "styled-components";
 import css from "@styled-system/css";
 import { SidebarWithCardMenu } from "layouts/sidebar/sidebar-with-card-menu";
 import CloseModalOutsideClick from "../utils/closeModalOutsideClick";
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import _ from "lodash";
 import Woocommerce from "../lib/woocommerce";
 import axios from "axios";
-
 const BuyingGuide = dynamic(() => import("components/buying-guide"), {
   ssr: false,
 });
@@ -25,7 +24,25 @@ import {
   consumerSecret,
   siteURL,
 } from "site-settings/site-credentials";
-
+import Carousel from "react-multi-carousel";
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 780 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 780, min: 420 },
+    items: 1,
+  },
+  smallMobile: {
+    breakpoint: { max: 420, min: 0 },
+    items: 1,
+  },
+};
 export default function GroceryTwoPage({ categories, products, deviceType }) {
   const productsRef = useRef(null);
 
@@ -49,7 +66,10 @@ export default function GroceryTwoPage({ categories, products, deviceType }) {
             {/* <Box w="full" h="max" position="relative" mb="6">
               <BuyingGuide />
             </Box> */}
-
+            <Carousel swipeable={true} infinite={true} responsive={responsive}>
+              <Image src="https://www.myventema.gr/_next/image?url=%2F_next%2Fstatic%2Fimages%2Fgrocery-banner-img-two-658e1c2d65126ebc7981281be152d144.jpg&w=2048&q=75" />
+              <Image src="https://www.myventema.gr/_next/image?url=%2F_next%2Fstatic%2Fimages%2Fgrocery-banner-img-one-f183d80d2b3224c2a13e2e340a781be7.jpg&w=2048&q=75" />
+            </Carousel>
             {/* just for useRef */}
             <Box ref={productsRef} />
             <ProductGrid
