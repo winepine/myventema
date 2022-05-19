@@ -1,38 +1,51 @@
-import React, { useEffect, useState } from 'react';
-import ChakraLoading from 'components/common/ChakraLoading';
-import ChildCategory from 'components/Pages/ChildCategory'
-import WooCommerce from 'lib/woocommerce'
-import { useRouter } from 'next/router';
-import _ from 'lodash';
-import { NextSeo } from 'next-seo';
-import { getCategoryPageData } from 'services/categoryPage';
-import { getAllWCCategories } from 'services/categories';
-import { getExtractedAttributes } from 'utils/getExtractedAttributes';
-import useSWR from 'swr';
+import React, { useEffect, useState } from "react";
+import ChakraLoading from "components/common/ChakraLoading";
+import ChildCategory from "components/Pages/ChildCategory";
+import WooCommerce from "lib/woocommerce";
+import { useRouter } from "next/router";
+import _ from "lodash";
+import { NextSeo } from "next-seo";
+import { getCategoryPageData } from "services/categoryPage";
+import { getAllWCCategories } from "services/categories";
+import { getExtractedAttributes } from "utils/getExtractedAttributes";
+import useSWR from "swr";
+import axios from "axios";
+import {
+  consumerKey,
+  consumerSecret,
+  siteURL,
+} from "site-settings/site-credentials";
 
-const Category = ({ dbProducts, count, subCategories, category, deviceType }) => {
+const Category = ({
+  dbProducts,
+  count,
+  subCategories,
+  category,
+  deviceType,
+}) => {
   const productDB = JSON.parse(dbProducts);
   const router = useRouter();
   const [parentCategories, setParentCategories] = useState([]);
   const [productsLoading, setProductsLoading] = useState(false);
   const yoast = category?.meta?.yoast_head_json;
   const [filteredProducts, setFilteredProducts] = useState(undefined);
-  const [products, setProducts] = useState(productDB.slice(0, 36))
+  const [products, setProducts] = useState(productDB.slice(0, 36));
   const [attributes, setAttributes] = useState([]);
   // const [count, setCount] = useState(_count)
 
   useEffect(() => {
     async function getAsyncData() {
-      const { attributes } = await getExtractedAttributes({ products: productDB });
-      setAttributes(attributes)
+      const { attributes } = await getExtractedAttributes({
+        products: productDB,
+      });
+      setAttributes(attributes);
     }
     getAsyncData();
-  }, [])
-
+  }, []);
 
   useEffect(() => {
     async function getAsyncData() {
-      const { category: categorySlug1, ...rest } = router.query
+      const { category: categorySlug1, ...rest } = router.query;
 
       // if (Object.keys(rest).length === 0) {
       //   setProducts(productDB.slice(0, 36))
@@ -43,20 +56,25 @@ const Category = ({ dbProducts, count, subCategories, category, deviceType }) =>
       const order = router?.query?.order || undefined;
       const attribute = router?.query?.attribute || undefined;
       const attribute_term = router?.query?.attributeTerm || undefined;
-      const page = router?.query?.page || 1
+      const page = router?.query?.page || 1;
 
-      setProductsLoading(true)
-      const { data: products } = await WooCommerce.get(`products`, { category: category.meta.id, per_page: 36, page, orderby, order, attribute, attribute_term });
+      setProductsLoading(true);
+      // const { data: products } = await WooCommerce.get(`products`, { category: category.meta.id, per_page: 36, page, orderby, order, attribute, attribute_term });
+      const { data: products } =
+        await axios.get(`${siteURL}/wp-json/wc/v3/products?per_page=36&orderby=${orderby}&consumer_key=${consumerKey}&consumer_secret=${consumerSecret}&category=${
+          category?.meta?.id || ""
+        }&page=${page}
+      `);
       setProducts(products);
       setProductsLoading(false);
     }
     getAsyncData();
-  }, [router.query])
+  }, [router.query]);
 
-  if (router.isFallback) return <ChakraLoading />
+  if (router.isFallback) return <ChakraLoading />;
   return (
     <>
-      <NextSeo 
+      <NextSeo
         title={yoast?.title || ""}
         canonical={yoast?.canonical}
         openGraph={{
@@ -65,19 +83,21 @@ const Category = ({ dbProducts, count, subCategories, category, deviceType }) =>
           type: yoast?.og_type || "",
           url: yoast?.og_url || "",
           locale: yoast?.og_locale || "",
-          site_name: yoast?.og_site_name || ""
+          site_name: yoast?.og_site_name || "",
         }}
         twitter={{
           cardType: yoast?.twitter_card,
         }}
         robotsProps={{
-          maxImagePreview: yoast?.robots['max-image-preview'].split(":")?.[1],
-          maxSnippet: parseInt(yoast?.robots['max-snippet']?.split(":")?.[1]),
-          maxVideoPreview: parseInt(yoast?.robots['max-video-preview']?.split(":")?.[1]),
+          maxImagePreview: yoast?.robots["max-image-preview"].split(":")?.[1],
+          maxSnippet: parseInt(yoast?.robots["max-snippet"]?.split(":")?.[1]),
+          maxVideoPreview: parseInt(
+            yoast?.robots["max-video-preview"]?.split(":")?.[1]
+          ),
         }}
       />
-      <ChildCategory   
-        deviceType={deviceType} 
+      <ChildCategory
+        deviceType={deviceType}
         categories={parentCategories}
         productsData={filteredProducts ? filteredProducts : products}
         productsDataType="restapi"
@@ -89,12 +109,15 @@ const Category = ({ dbProducts, count, subCategories, category, deviceType }) =>
         attributes={attributes?.length > 0 ? attributes : []}
       />
     </>
-  )
-}
+  );
+};
 
 export async function getServerSideProps({ params, query }) {
   try {
-    const { document: category, error } = await getCategoryPageData("categories", { "category.slug": params.category });
+    const { document: category, error } = await getCategoryPageData(
+      "categories",
+      { "category.slug": params.category }
+    );
 
     return {
       props: {
@@ -103,16 +126,16 @@ export async function getServerSideProps({ params, query }) {
         category: {
           name: category?.category?.name,
           description: category?.category?.description,
-          meta: {...category?.category}
+          meta: { ...category?.category },
         },
         dbProducts: JSON.stringify(category?.products || []),
       },
-    }
+    };
   } catch (error) {
-    console.log("/[category] :: ", { params, error })
+    console.log("/[category] :: ", { params, error });
     return {
-      notFound: true
-    }
+      notFound: true,
+    };
   }
 }
 
@@ -126,7 +149,7 @@ export async function getServerSideProps({ params, query }) {
 //   };
 // }
 
-export default Category
+export default Category;
 
 // const orderby = query.orderby || "popularity";
 //   const order = query.order || undefined;
@@ -140,9 +163,9 @@ export default Category
 
 //     const { document: category, error } = await getSingleDocument("categories", { "category.slug": params.category });
 //     const dbProducts = category?.products || [];
-    
+
 //     const { attributes } = await getExtractedAttributes({ products: dbProducts });
-    
+
 //     return {
 //       props: {
 //         products: products || [],

@@ -111,9 +111,11 @@ export async function getStaticProps() {
     `${siteURL}/wp-json/wc/v3/products/categories?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}&parent=0&per_page=20`
   );
   const { data: products } = await axios.get(
-    `${siteURL}/wp-json/wc/v3/products?per_page=30&orderby=popularity&order=desc&featured=true&consumer_key=${consumerKey}&consumer_secret=${consumerSecret}`
-  );
+    `${siteURL}/wp-json/wc/v3/products?per_page=16&orderby=popularity&order=desc&consumer_key=${consumerKey}&consumer_secret=${consumerSecret}`
 
+    // `${siteURL}/wp-json/wc/v3/products?lang=en&per_page=30&orderby=popularity&order=desc&featured=true&consumer_key=${consumerKey}&consumer_secret=${consumerSecret}`
+  );
+  console.log(products);
   const filteredCategories = categories.filter(
     category => category.name !== "Uncategorized"
   );
